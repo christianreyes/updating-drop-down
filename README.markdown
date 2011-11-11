@@ -7,6 +7,8 @@ Select a movie and characters are loaded for that movie. I have populated the da
 
 Live demo: [http://updating-dropdown-example.heroku.com/](http://updating-dropdown-example.heroku.com/)
 
+To download: `git clone https://github.com/trogrey121/updating-drop-down.git`
+
 Problem
 -----
 
