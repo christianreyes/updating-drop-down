@@ -9,13 +9,13 @@
 					<legend>Favorite Character Survey</legend>
 					<div class="clearfix">
 						<label>Movie:</label>
-						<div class="input">
+						<div class="input movies">
 							<%= collection_select(:survey, :movie_id, @movies, :id, :name, {:prompt => "Select a movie"})%>
 						</div>
 					</div>
 					<div class="clearfix">
 						<label>Character</label>
-						<div class="input character">
+						<div class="input characters">
 							<select>
 								<option></option>
 							</select>
