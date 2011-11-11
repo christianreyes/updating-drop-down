@@ -1,2 +1,28 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container">
+	<div class="hero-unit">
+		<h1>Updating drop down example</h1>
+	</div>
+	<div class="row">
+		<div class="span8 offset4">
+			<form class="survey">
+				<fieldset>
+					<legend>Favorite Character Survey</legend>
+					<div class="clearfix">
+						<label>Movie:</label>
+						<div class="input">
+							<%= collection_select(:survey, :movie_id, @movies, :id, :name, {:prompt => "Select a movie"})%>
+						</div>
+					</div>
+					<div class="clearfix">
+						<label>Character</label>
+						<div class="input character">
+							<select>
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div >
