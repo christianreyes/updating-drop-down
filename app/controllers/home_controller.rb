@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   def characters_in_movie
     # get all the characters in that movie
-    @characters = Character.where(:movie_id => params[:movie_id])
+    @characters = Character.all.where(:movie_id => params[:movie_id])
     
     respond_to do |format|
       # only render the partial "_characters.html.erb". Send @characters as the variable "characters" to the partial
