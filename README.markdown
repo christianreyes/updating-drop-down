@@ -9,6 +9,10 @@ Live demo: [http://updating-dropdown-example.heroku.com/](http://updating-dropdo
 
 To download: `git clone https://github.com/trogrey121/updating-drop-down.git`
 
+`bundle --without production`
+
+`rake db:migrate` to load db
+
 Problem
 -----
 
