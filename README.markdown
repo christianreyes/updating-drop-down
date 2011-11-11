@@ -3,7 +3,9 @@ Updating drop-down example
 
 This is an example form made with Rails 3.1.1 and jQuery. 
 
-Select a movie and characters are loaded for that movie. I have populated the database with default values.
+Select a movie and characters are loaded for that movie. I have populated the database with default values. A movie has many characters.
+
+Live demo: [http://updating-dropdown-example.heroku.com/](http://updating-dropdown-example.heroku.com/)
 
 Problem
 -----
@@ -18,9 +20,9 @@ Load data from a url into a placeholder for the drop-down
 Step-by-step
 ========
 
-1. Create a placeholder for the drop-down to be loaded (in app / views / home / index.html.erb)
+*  Create a placeholder for the drop-down to be loaded (in app / views / home / index.html.erb)
 
-```erb
+```html
 ...
 <label>Character</label>
 <div class="input characters">
@@ -31,13 +33,13 @@ Step-by-step
 ...
 ```
 
-2. Create a partial which will provide the html of the loaded drop-down (app/views/home/_characters.html.erb)
+*  Create a partial which will provide the html of the loaded drop-down (app/views/home/_characters.html.erb)
 
-```
+```ruby
 <%= collection_select(:survey, :character_id, characters, :id, :name, {:prompt => "Select a character"})%>
 ```
 
-3. Create a method in home_controller for requesting the data
+*  Create a method in home_controller for requesting the data
 
 ```ruby
 def characters_in_movie
@@ -52,14 +54,14 @@ def characters_in_movie
 end
 ```
 
-4. Add the home/characters_in_movie route to routes.rb
+*  Add the home/characters_in_movie route to routes.rb
 
 ```ruby
 # needed for loading the characters drop-down. will automatically call characters_in_movie in home_controller
 get "home/characters_in_movie"
 ```
 
-4. Create an event listener for the onchange event of the first drop-down (app / assets / javascripts / home.js )(or anywhere else you have your javascript)
+*  Create an event listener for the onchange event of the first drop-down (app / assets / javascripts / home.js )(or anywhere else you have your javascript)
 
 ```javascript
 // execute when page has finished loading
@@ -74,4 +76,4 @@ $(function(){
 });
 ```
 
-5. Use the updating drop-down!
+*  Use the updating drop-down!
