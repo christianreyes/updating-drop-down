@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
   def characters_in_movie
     # get all the characters in that movie
+    # expecting format of /home/characters_in_movie?movie_id=1
     @characters = Character.all.where(:movie_id => params[:movie_id])
     
     respond_to do |format|
